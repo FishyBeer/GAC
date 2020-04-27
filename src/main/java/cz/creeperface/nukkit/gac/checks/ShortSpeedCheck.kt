@@ -57,6 +57,9 @@ object ShortSpeedCheck {
 
                 if (time - cheatData.lastJump < 1000) {
                     maxDistance += 0.2
+                    if (player.getLevel().getBlock(player.x, player.y - 1, player.z) = Block.get(Block.Ice) {
+                        maxDistance += 0.15
+                    }
                 }
             } else if (p.isSneaking && acData.speedData.lastSpeedType > SpeedData.SpeedType.SNEAK && time - acData.speedData.lastSpeedChange < 800) {
                 maxDistance = 0.131
